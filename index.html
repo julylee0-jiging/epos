@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Around50s Iwassan | おすすめカード・サービス</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #3A7DC9;
+      --blue-dark: #1A5CA8;
+      --blue-deep: #0f3d7a;
+      --blue-light: #DDEAF7;
+      --gray: #888888;
+      --white: #ffffff;
+      --text: #1a1a2e;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: #0a1628;
+      color: var(--white);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Background */
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(58,125,201,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(58,125,201,0.06) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-glow {
+      position: fixed;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 600px;
+      background: radial-gradient(ellipse, rgba(58,125,201,0.18) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Header */
+    header {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      border-bottom: 1px solid rgba(58,125,201,0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      color: var(--white);
+    }
+    .logo span {
+      color: var(--blue);
+    }
+
+    .header-sub {
+      font-size: 0.7rem;
+      color: var(--gray);
+      letter-spacing: 0.12em;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 70px 20px 50px;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      color: var(--blue);
+      border: 1px solid rgba(58,125,201,0.4);
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.6rem, 5vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 14px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--blue);
+    }
+
+    .hero-desc {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      line-height: 1.8;
+    }
+
+    /* Divider */
+    .divider {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 0 40px;
+      margin: 10px 0 40px;
+    }
+    .divider-line { flex: 1; height: 1px; background: rgba(58,125,201,0.2); }
+    .divider-label {
+      font-size: 0.7rem;
+      color: var(--gray);
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.15em;
+    }
+
+    /* Cards */
+    .cards-section {
+      position: relative;
+      z-index: 10;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(58,125,201,0.2);
+      border-radius: 16px;
+      padding: 28px 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+      cursor: default;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(58,125,201,0.6);
+      background: rgba(58,125,201,0.07);
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--blue);
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+    }
+
+    .card-desc {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.8;
+      font-weight: 300;
+      flex: 1;
+    }
+
+    /* Affiliate Banner Area */
+    .banner-wrap {
+      margin-top: 4px;
+      border-top: 1px solid rgba(58,125,201,0.15);
+      padding-top: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .banner-label {
+      font-size: 0.6rem;
+      color: var(--gray);
+      letter-spacing: 0.12em;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .banner-container {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      z-index: 10;
+      border-top: 1px solid rgba(58,125,201,0.15);
+      padding: 28px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.1em;
+    }
+    .footer-logo span { color: var(--blue); }
+
+    .footer-note {
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.06em;
+      line-height: 1.6;
+    }
+
+    .footer-blue-line {
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+      margin-bottom: 0;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero { animation: fadeUp 0.6s ease both; }
+    .card:nth-child(1) { animation: fadeUp 0.6s 0.1s ease both; }
+    .card:nth-child(2) { animation: fadeUp 0.6s 0.2s ease both; }
+    .card:nth-child(3) { animation: fadeUp 0.6s 0.3s ease both; }
+
+    @media (max-width: 600px) {
+      header { padding: 16px 20px; }
+      .hero { padding: 50px 20px 30px; }
+      .divider { padding: 0 20px; }
+      footer { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+  <header>
+    <div class="logo">Around50s <span>Iwassan</span></div>
+    <div class="header-sub">Credit Cards · Miles · Hotels · Travel</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-eyebrow">いわっさん厳選リンク集</div>
+    <h1>マイルと旅を<em>もっと賢く</em>。<br>おすすめカード＆サービス</h1>
+    <p class="hero-desc">チャンネルでご紹介しているカード・サービスへのリンクをまとめています。<br>詳細は各バナーよりご確認ください。</p>
+  </section>
+
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-label">RECOMMENDED</div>
+    <div class="divider-line"></div>
+  </div>
+
+  <div class="cards-section">
+
+    <!-- Card 1: ここにアフィリエイトバナーを配置 -->
+    <div class="card">
+      <div class="card-tag">クレジットカード</div>
+      <div class="card-title">いわっさん厳選<br>おすすめカード</div>
+      <div class="card-desc">マイル還元率・特典・年会費のバランスで選んだ一枚。詳細は下記バナーからご確認ください。</div>
+      <div class="banner-wrap">
+        <div class="banner-label">PR · AFFILIATE</div>
+        <div class="banner-container">
+          <script language='javascript' src='https://ad-verification.j-a-net.jp/ad/js/brandsafe.js'></script>
+          <div id='div_admane_async_1918_658_2969'>
+            <script language='javascript'>
+            <!--
+            brandsafe_js_async('//ad-verification.j-a-net.jp/ad', '_site=1918&_article=658&_link=2969&_image=3216', '2449698', '837424', '');
+            //-->
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: 予備スロット（必要に応じて追加） -->
+    <div class="card">
+      <div class="card-tag">マイレージ</div>
+      <div class="card-title">マイルを貯める<br>おすすめサービス</div>
+      <div class="card-desc">日常のお買い物からマイルを効率的に貯める方法をご紹介。詳細はバナーからどうぞ。</div>
+      <div class="banner-wrap">
+        <div class="banner-label">PR · AFFILIATE</div>
+        <div class="banner-container">
+          <!-- 追加バナーをここに挿入 -->
+          <div style="height:60px; background: rgba(58,125,201,0.08); border: 1px dashed rgba(58,125,201,0.3); border-radius:6px; display:flex; align-items:center; justify-content:center;">
+            <span style="font-size:0.7rem; color:rgba(255,255,255,0.25); letter-spacing:0.1em;">バナー追加予定</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: 予備スロット -->
+    <div class="card">
+      <div class="card-tag">ホテル・旅行</div>
+      <div class="card-title">旅をお得にする<br>おすすめサービス</div>
+      <div class="card-desc">ホテルステータスや旅行保険など、旅好きの40・50代に役立つサービスをご紹介。</div>
+      <div class="banner-wrap">
+        <div class="banner-label">PR · AFFILIATE</div>
+        <div class="banner-container">
+          <!-- 追加バナーをここに挿入 -->
+          <div style="height:60px; background: rgba(58,125,201,0.08); border: 1px dashed rgba(58,125,201,0.3); border-radius:6px; display:flex; align-items:center; justify-content:center;">
+            <span style="font-size:0.7rem; color:rgba(255,255,255,0.25); letter-spacing:0.1em;">バナー追加予定</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-blue-line"></div>
+    <div class="footer-logo">Around50s <span>Iwassan</span></div>
+    <div class="footer-note">
+      ※当ページのリンクにはアフィリエイト広告が含まれます。<br>
+      © Around50s Iwassan. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
