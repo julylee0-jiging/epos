@@ -3,506 +3,451 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Around50s Iwassan | おすすめカード・サービス</title>
+  <meta name="description" content="いわっさん紹介コードでラグジュアリーカードに申し込むと、通常より多くのポイントが獲得できます。">
+  <meta property="og:title" content="ラグジュアリーカード｜いわっさん紹介リンク">
+  <meta property="og:description" content="紹介コードLCAMBJA044から申し込みで最大50,000pt獲得">
+  <meta property="og:type" content="website">
+  <title>ラグジュアリーカード｜いわっさん紹介リンク</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      --blue: #3A7DC9;
-      --blue-dark: #1A5CA8;
-      --blue-deep: #0f3d7a;
-      --blue-light: #DDEAF7;
-      --gray: #888888;
-      --white: #ffffff;
-      --text: #1a1a2e;
+      --gold: #C9A84C;
+      --gold-light: #E8C96A;
+      --gold-pale: #F5E9C8;
+      --black: #0D0D0D;
+      --dark: #1A1A1A;
+      --mid: #2C2C2C;
+      --text: #E8E0D0;
+      --text-muted: #9A9080;
+      --white: #FDFAF4;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
+      background: var(--black);
+      color: var(--text);
       font-family: 'Noto Sans JP', sans-serif;
-      background: #0a1628;
-      color: var(--white);
+      font-weight: 300;
+      line-height: 1.7;
       min-height: 100vh;
-      overflow-x: hidden;
     }
 
-    /* Background */
-    .bg-grid {
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(58,125,201,0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(58,125,201,0.06) 1px, transparent 1px);
-      background-size: 60px 60px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .bg-glow {
-      position: fixed;
-      top: -200px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 800px;
-      height: 600px;
-      background: radial-gradient(ellipse, rgba(58,125,201,0.18) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Header */
+    /* ── Header ── */
     header {
-      position: relative;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 40px;
-      border-bottom: 1px solid rgba(58,125,201,0.2);
-      backdrop-filter: blur(10px);
-    }
-
-    .logo {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: 1rem;
-      letter-spacing: 0.08em;
-      color: var(--white);
-    }
-    .logo span {
-      color: var(--blue);
-    }
-
-    .header-sub {
-      font-size: 0.7rem;
-      color: var(--gray);
-      letter-spacing: 0.12em;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 300;
-    }
-
-    /* Hero */
-    .hero {
-      position: relative;
-      z-index: 10;
       text-align: center;
-      padding: 70px 20px 50px;
-    }
-
-    .hero-eyebrow {
-      display: inline-block;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.25em;
-      color: var(--blue);
-      border: 1px solid rgba(58,125,201,0.4);
-      padding: 6px 18px;
-      border-radius: 50px;
-      margin-bottom: 24px;
-      text-transform: uppercase;
-    }
-
-    .hero h1 {
-      font-size: clamp(1.6rem, 5vw, 2.6rem);
-      font-weight: 700;
-      line-height: 1.5;
-      margin-bottom: 14px;
-      letter-spacing: 0.02em;
-    }
-
-    .hero h1 em {
-      font-style: normal;
-      color: var(--blue);
-    }
-
-    .hero-desc {
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.55);
-      font-weight: 300;
-      letter-spacing: 0.04em;
-      line-height: 1.8;
-    }
-
-    /* Divider */
-    .divider {
+      padding: 48px 24px 32px;
       position: relative;
-      z-index: 10;
+    }
+    header::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 24px auto 0;
+    }
+    .channel-name {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .page-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(20px, 5vw, 28px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.4;
+    }
+    .page-subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 10px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* ── Card Section ── */
+    .card-section {
+      background: var(--dark);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #1C1810 0%, #2A2215 50%, #1C1810 100%);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      padding: 24px 28px 20px;
       display: flex;
       align-items: center;
-      gap: 16px;
-      padding: 0 40px;
-      margin: 10px 0 40px;
+      gap: 14px;
     }
-    .divider-line { flex: 1; height: 1px; background: rgba(58,125,201,0.2); }
-    .divider-label {
-      font-size: 0.7rem;
-      color: var(--gray);
-      font-family: 'Montserrat', sans-serif;
-      letter-spacing: 0.15em;
-    }
-
-    /* Cards */
-    .cards-section {
-      position: relative;
-      z-index: 10;
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 24px 80px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(58,125,201,0.2);
-      border-radius: 16px;
-      padding: 28px 28px 24px;
+    .card-icon {
+      width: 48px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+      border-radius: 5px;
       display: flex;
-      flex-direction: column;
-      gap: 16px;
-      transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-      cursor: default;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 12px rgba(201,168,76,0.3);
     }
-
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(58,125,201,0.6);
-      background: rgba(58,125,201,0.07);
-    }
-
-    .card-tag {
-      display: inline-block;
-      font-size: 0.62rem;
+    .card-header-text h2 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 16px;
       font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--blue);
-      font-family: 'Montserrat', sans-serif;
+      color: var(--white);
+      line-height: 1.3;
+    }
+    .card-header-text p {
+      font-size: 11px;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      margin-top: 3px;
     }
 
-    .card-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      line-height: 1.5;
-      letter-spacing: 0.02em;
-    }
+    .card-body { padding: 24px 28px; }
 
-    .card-desc {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.5);
-      line-height: 1.8;
-      font-weight: 300;
-      flex: 1;
-    }
-
-    /* Affiliate Banner Area */
-    .banner-wrap {
-      margin-top: 4px;
-      border-top: 1px solid rgba(58,125,201,0.15);
-      padding-top: 18px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-    }
-
-    .banner-label {
-      font-size: 0.6rem;
-      color: var(--gray);
-      letter-spacing: 0.12em;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .banner-container {
-      width: 100%;
-      overflow: hidden;
-      border-radius: 8px;
-    }
-
-    /* Footer */
-    footer {
-      position: relative;
-      z-index: 10;
-      border-top: 1px solid rgba(58,125,201,0.15);
-      padding: 28px 40px;
+    /* ── Referral Code ── */
+    .referral-block {
+      background: var(--mid);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
       gap: 12px;
     }
-
-    .footer-logo {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.4);
+    .referral-label {
+      font-size: 11px;
+      color: var(--text-muted);
       letter-spacing: 0.1em;
+      margin-bottom: 4px;
     }
-    .footer-logo span { color: var(--blue); }
-
-    .footer-note {
-      font-size: 0.68rem;
-      color: rgba(255,255,255,0.25);
-      letter-spacing: 0.06em;
-      line-height: 1.6;
-    }
-
-    .footer-blue-line {
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--blue), transparent);
-      margin-bottom: 0;
-    }
-
-    /* Luxury Card special styles */
-    .luxury-card {
-      border-color: rgba(180,150,80,0.35);
-      background: rgba(180,150,80,0.04);
-    }
-    .luxury-card:hover {
-      border-color: rgba(180,150,80,0.7);
-      background: rgba(180,150,80,0.08);
-    }
-    .luxury-card .card-tag {
-      color: #c9a84c;
-    }
-    .luxury-points {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-top: 2px;
-    }
-    .luxury-point-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.78rem;
-      padding: 6px 10px;
-      border-radius: 6px;
-      background: rgba(180,150,80,0.07);
-      border: 1px solid rgba(180,150,80,0.15);
-    }
-    .luxury-point-label {
-      color: rgba(255,255,255,0.6);
-      font-weight: 300;
-    }
-    .luxury-point-value {
-      color: #c9a84c;
+    .referral-code {
+      font-family: 'Courier New', monospace;
+      font-size: 20px;
       font-weight: 700;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.82rem;
-    }
-    .luxury-condition {
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.35);
-      line-height: 1.7;
-      padding: 8px 0 0;
-      border-top: 1px solid rgba(180,150,80,0.12);
-    }
-    .luxury-code-block {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(180,150,80,0.1);
-      border: 1px solid rgba(180,150,80,0.3);
-      border-radius: 8px;
-      padding: 10px 14px;
-      margin-top: 2px;
-    }
-    .luxury-code-label {
-      font-size: 0.6rem;
-      color: rgba(255,255,255,0.4);
+      color: var(--gold-light);
       letter-spacing: 0.12em;
-      font-family: 'Montserrat', sans-serif;
-      display: block;
-      margin-bottom: 2px;
-    }
-    .luxury-code-value {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      color: #c9a84c;
-      letter-spacing: 0.18em;
     }
     .copy-btn {
-      background: rgba(180,150,80,0.2);
-      border: 1px solid rgba(180,150,80,0.4);
-      color: #c9a84c;
-      font-size: 0.65rem;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      padding: 5px 12px;
-      border-radius: 4px;
+      background: transparent;
+      border: 1px solid rgba(201,168,76,0.4);
+      color: var(--gold);
+      font-size: 11px;
+      font-family: 'Noto Sans JP', sans-serif;
+      letter-spacing: 0.08em;
+      padding: 8px 14px;
+      border-radius: 6px;
       cursor: pointer;
-      transition: background 0.2s;
+      white-space: nowrap;
+      transition: all 0.2s;
+      flex-shrink: 0;
     }
-    .copy-btn:hover { background: rgba(180,150,80,0.35); }
-    .luxury-btn {
-      display: block;
-      text-align: center;
-      background: linear-gradient(135deg, #b8962e, #c9a84c, #e8c96a);
-      color: #1a1200;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 0.82rem;
-      letter-spacing: 0.12em;
-      text-decoration: none;
-      padding: 13px 20px;
+    .copy-btn:hover { background: rgba(201,168,76,0.1); border-color: var(--gold); }
+    .copy-btn.copied { color: #6FCF97; border-color: #6FCF97; }
+
+    /* ── Tier Table ── */
+    .tier-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .tier-item {
+      background: var(--mid);
+      border: 1px solid rgba(255,255,255,0.06);
       border-radius: 8px;
-      transition: opacity 0.2s, transform 0.2s;
-      margin-top: 4px;
+      padding: 12px 10px;
+      text-align: center;
     }
-    .luxury-btn:hover { opacity: 0.88; transform: translateY(-1px); }
-
-    /* Animations */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .tier-item.highlight {
+      border-color: rgba(201,168,76,0.3);
+      background: linear-gradient(160deg, #2A2215, #1C1810);
+    }
+    .tier-name {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      letter-spacing: 0.05em;
+    }
+    .tier-pt {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--gold-light);
+      line-height: 1.1;
+    }
+    .tier-pt span {
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-left: 2px;
     }
 
-    .hero { animation: fadeUp 0.6s ease both; }
-    .card:nth-child(1) { animation: fadeUp 0.6s 0.1s ease both; }
-    .card:nth-child(2) { animation: fadeUp 0.6s 0.2s ease both; }
-    .card:nth-child(3) { animation: fadeUp 0.6s 0.3s ease both; }
+    .condition-note {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 8px;
+      border-left: 2px solid rgba(201,168,76,0.3);
+      margin-bottom: 22px;
+    }
+    .condition-note strong { color: var(--gold-light); }
 
-    @media (max-width: 600px) {
-      header { padding: 16px 20px; }
-      .hero { padding: 50px 20px 30px; }
-      .divider { padding: 0 20px; }
-      footer { padding: 24px 20px; }
+    /* ── CTA Button ── */
+    .cta-btn {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #B8922A 0%, #E8C96A 45%, #C9A84C 55%, #B8922A 100%);
+      color: var(--black);
+      text-decoration: none;
+      text-align: center;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      padding: 16px 24px;
+      border-radius: 10px;
+      transition: opacity 0.2s, transform 0.15s;
+      box-shadow: 0 4px 20px rgba(201,168,76,0.25);
+    }
+    .cta-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+    .cta-btn:active { transform: translateY(0); }
+    .cta-btn-sub {
+      text-align: center;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 10px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── YouTube Banner ── */
+    .yt-banner {
+      background: var(--dark);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .yt-banner:hover { border-color: rgba(255,80,80,0.4); }
+    .yt-icon {
+      width: 40px;
+      height: 40px;
+      background: #FF0000;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+    .yt-text { flex: 1; }
+    .yt-text strong {
+      display: block;
+      font-size: 13px;
+      color: var(--white);
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+    .yt-text small {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .yt-arrow {
+      color: var(--text-muted);
+      font-size: 16px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px 20px 36px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin-top: 8px;
+    }
+    .footer-channel {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 13px;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .footer-note {
+      font-size: 10px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ── Toast ── */
+    .toast {
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: #1A2A1A;
+      border: 1px solid #6FCF97;
+      color: #6FCF97;
+      font-size: 12px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      letter-spacing: 0.08em;
+      transition: transform 0.3s ease;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+
+    @media (max-width: 400px) {
+      .referral-block { flex-direction: column; align-items: flex-start; }
+      .card-header { padding: 18px 20px 16px; }
+      .card-body { padding: 20px; }
     }
   </style>
 </head>
 <body>
-  <div class="bg-grid"></div>
-  <div class="bg-glow"></div>
 
   <header>
-    <div class="logo">Around50s <span>Iwassan</span></div>
-    <div class="header-sub">Credit Cards · Miles · Hotels · Travel</div>
+    <div class="channel-name">Around50s Iwassan</div>
+    <h1 class="page-title">いわっさん紹介リンク</h1>
+    <p class="page-subtitle">ラグジュアリーカード 公式紹介ページ</p>
   </header>
 
-  <section class="hero">
-    <div class="hero-eyebrow">いわっさん厳選リンク集</div>
-    <h1>マイルと旅を<em>もっと賢く</em>。<br>おすすめカード＆サービス</h1>
-    <p class="hero-desc">チャンネルでご紹介しているカード・サービスへのリンクをまとめています。<br>詳細は各バナーよりご確認ください。</p>
-  </section>
+  <main>
 
-  <div class="divider">
-    <div class="divider-line"></div>
-    <div class="divider-label">RECOMMENDED</div>
-    <div class="divider-line"></div>
-  </div>
+    <!-- Luxury Card Section -->
+    <div class="card-section">
+      <div class="card-header">
+        <div class="card-icon">💳</div>
+        <div class="card-header-text">
+          <h2>ラグジュアリーカード</h2>
+          <p>PR · AFFILIATE · REFERRAL</p>
+        </div>
+      </div>
+      <div class="card-body">
 
-  <div class="cards-section">
+        <!-- 紹介コード -->
+        <div class="referral-block">
+          <div>
+            <div class="referral-label">REFERRAL CODE · 紹介コード</div>
+            <div class="referral-code" id="refCode">LCAMBJA044</div>
+          </div>
+          <button class="copy-btn" id="copyBtn" onclick="copyCode()">コピー</button>
+        </div>
 
-    <!-- Card 1: ここにアフィリエイトバナーを配置 -->
-    <div class="card">
-      <div class="card-tag">クレジットカード</div>
-      <div class="card-title">いわっさん厳選<br>おすすめカード</div>
-      <div class="card-desc">マイル還元率・特典・年会費のバランスで選んだ一枚。詳細は下記バナーからご確認ください。</div>
-      <div class="banner-wrap">
-        <div class="banner-label">PR · AFFILIATE</div>
-        <div class="banner-container">
-          <script language='javascript' src='https://ad-verification.j-a-net.jp/ad/js/brandsafe.js'></script>
-          <div id='div_admane_async_1918_658_2969'>
-            <script language='javascript'>
-            <!--
-            brandsafe_js_async('//ad-verification.j-a-net.jp/ad', '_site=1918&_article=658&_link=2969&_image=3216', '2449698', '837424', '');
-            //-->
-            </script>
+        <!-- Tier -->
+        <div class="tier-label">紹介コード入力で獲得できるポイント</div>
+        <div class="tier-grid">
+          <div class="tier-item">
+            <div class="tier-name">チタン</div>
+            <div class="tier-pt">15,000<span>pt</span></div>
+          </div>
+          <div class="tier-item">
+            <div class="tier-name">ブラック</div>
+            <div class="tier-pt">30,000<span>pt</span></div>
+          </div>
+          <div class="tier-item highlight">
+            <div class="tier-name">ゴールド</div>
+            <div class="tier-pt">50,000<span>pt</span></div>
           </div>
         </div>
+
+        <!-- 条件 -->
+        <div class="condition-note">
+          📋 入会月を含む<strong>4ヶ月以内</strong>に<strong>合計30万円以上</strong>の決済完了で獲得
+        </div>
+
+        <!-- CTA -->
+        <a href="https://x.gd/oFQOq" target="_blank" rel="noopener" class="cta-btn">
+          ▶ ラグジュアリーカードに申し込む
+        </a>
+        <p class="cta-btn-sub">※ 上記リンクはアフィリエイトリンクです</p>
+
       </div>
     </div>
 
-    <!-- Card 2: Luxury Card -->
-    <div class="card luxury-card">
-      <div class="card-tag">Luxury Card · PR</div>
-      <div class="card-title">ラグジュアリーカード<br>いわっさん紹介リンク</div>
-      <div class="card-desc">いわっさんの紹介コードから申し込むと、通常より多くのポイントが獲得できます。</div>
-
-      <!-- 紹介コード -->
-      <div class="luxury-code-block">
-        <div>
-          <span class="luxury-code-label">紹介コード · REFERRAL CODE</span>
-          <span class="luxury-code-value" id="refcode">LCAMBJA044</span>
-        </div>
-        <button class="copy-btn" onclick="copyCode()">COPY</button>
+    <!-- YouTube Banner -->
+    <a href="https://www.youtube.com/@around50siwassan" target="_blank" rel="noopener" class="yt-banner">
+      <div class="yt-icon">▶</div>
+      <div class="yt-text">
+        <strong>Around50s Iwassan</strong>
+        <small>クレカ・マイル・ホテル攻略チャンネル</small>
       </div>
+      <div class="yt-arrow">›</div>
+    </a>
 
-      <!-- ポイント表 -->
-      <div class="luxury-points">
-        <div class="luxury-point-row">
-          <span class="luxury-point-label">チタン</span>
-          <span class="luxury-point-value">15,000 pt</span>
-        </div>
-        <div class="luxury-point-row">
-          <span class="luxury-point-label">ブラック</span>
-          <span class="luxury-point-value">30,000 pt</span>
-        </div>
-        <div class="luxury-point-row">
-          <span class="luxury-point-label">ゴールド</span>
-          <span class="luxury-point-value">50,000 pt</span>
-        </div>
-      </div>
-
-      <!-- 獲得条件 -->
-      <div class="luxury-condition">
-        📋 入会月を含む4ヶ月以内に<br>合計<strong style="color:rgba(255,255,255,0.7)">30万円以上</strong>の決済完了で獲得
-      </div>
-
-      <!-- 申込みボタン -->
-      <a class="luxury-btn" href="https://x.gd/oFQOq" target="_blank" rel="noopener">
-        ▶ ラグジュアリーカードに申し込む
-      </a>
-
-      <div class="banner-wrap" style="margin-top:0;">
-        <div class="banner-label">PR · AFFILIATE</div>
-      </div>
-    </div>
-
-    <!-- Card 3: 予備スロット -->
-    <div class="card">
-      <div class="card-tag">ホテル・旅行</div>
-      <div class="card-title">旅をお得にする<br>おすすめサービス</div>
-      <div class="card-desc">ホテルステータスや旅行保険など、旅好きの40・50代に役立つサービスをご紹介。</div>
-      <div class="banner-wrap">
-        <div class="banner-label">PR · AFFILIATE</div>
-        <div class="banner-container">
-          <!-- 追加バナーをここに挿入 -->
-          <div style="height:60px; background: rgba(58,125,201,0.08); border: 1px dashed rgba(58,125,201,0.3); border-radius:6px; display:flex; align-items:center; justify-content:center;">
-            <span style="font-size:0.7rem; color:rgba(255,255,255,0.25); letter-spacing:0.1em;">バナー追加予定</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
+  </main>
 
   <footer>
-    <div class="footer-blue-line"></div>
-    <div class="footer-logo">Around50s <span>Iwassan</span></div>
+    <div class="footer-channel">Around50s Iwassan</div>
     <div class="footer-note">
-      ※当ページのリンクにはアフィリエイト広告が含まれます。<br>
+      当ページのリンクにはアフィリエイト広告が含まれます。<br>
       © Around50s Iwassan. All rights reserved.
     </div>
   </footer>
 
+  <div class="toast" id="toast">紹介コードをコピーしました ✓</div>
+
   <script>
     function copyCode() {
-      const code = document.getElementById('refcode').textContent;
+      const code = document.getElementById('refCode').textContent;
+      const btn = document.getElementById('copyBtn');
+      const toast = document.getElementById('toast');
+
       navigator.clipboard.writeText(code).then(() => {
-        const btn = document.querySelector('.copy-btn');
-        btn.textContent = 'COPIED!';
-        setTimeout(() => btn.textContent = 'COPY', 2000);
+        btn.textContent = '✓ コピー済';
+        btn.classList.add('copied');
+        toast.classList.add('show');
+        setTimeout(() => {
+          btn.textContent = 'コピー';
+          btn.classList.remove('copied');
+          toast.classList.remove('show');
+        }, 2500);
+      }).catch(() => {
+        // fallback
+        const ta = document.createElement('textarea');
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = '✓ コピー済';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'コピー'; btn.classList.remove('copied'); }, 2500);
       });
     }
   </script>
+
 </body>
 </html>
