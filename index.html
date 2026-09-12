@@ -221,6 +221,26 @@
     margin-bottom: 6px;
   }
 
+  .cta-btn {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #A00C24 0%, #E8354F 45%, #C8102E 55%, #A00C24 100%);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    padding: 16px 24px;
+    border-radius: 10px;
+    transition: opacity 0.2s, transform 0.15s;
+    box-shadow: 0 4px 20px rgba(200,16,46,0.3);
+    margin-bottom: 20px;
+  }
+  .cta-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+  .cta-btn:active { transform: translateY(0); }
+
   .condition-note {
     font-size: 11px;
     color: var(--text-muted);
@@ -314,7 +334,8 @@
       <div class="card-icon">💳</div>
       <div class="card-header-text">
         <h2>エポスカード</h2>
-        <p>PR · AFFILIATE</p>
+        <!-- ★ JANet承認後、下記を "PR · AFFILIATE" に戻してください ★ -->
+        <p>公式サイトへ</p>
       </div>
     </div>
     <div class="card-body">
@@ -340,35 +361,19 @@
         </div>
       </div>
 
-      <!-- JANetバナー -->
-      <div class="banner-label">PR · JANet アフィリエイト</div>
-      <div class="banner-area">
-
-        <!-- ★★★ ここにJANetから取得したバナーコードを貼り付けてください ★★★ -->
-        <!-- 現在ご利用中のバナーコードをそのままここに移してください
-        <script language='javascript' src='https://ad-verification.j-a-net.jp/ad/js/brandsafe.js'></script>
-        <div id='div_admane_async_1918_658_2969'>
-        <script language='javascript'>
-        <!--
-        brandsafe_js_async('//ad-verification.j-a-net.jp/ad', '_site=1918&_article=658&_link=2969&_image=3216', '2449698', '837424', '');
-        //-->
-        </script>
-        </div>
-        -->
-
-        <div class="banner-placeholder">
-          <strong>📌 JANetバナーコードをここに貼り付けてください</strong>
-          既存ページに使っているコードと同じものを&lt;br&gt;
-          このプレースホルダーと差し替えてください。
-        </div>
-
-      </div>
+      <!-- 申込みボタン（ASP審査完了までの暫定リンク） -->
+      <!-- ★ JANet審査が承認され、バナーコードが発行されたら
+           このブロックをJANetのバナーコード（<script>〜<div>）に差し替えてください ★ -->
+      <a href="https://www.eposcard.co.jp/" target="_blank" rel="noopener" class="cta-btn">
+        ▶ エポスカードに申し込む
+      </a>
 
       <!-- 条件メモ -->
       <div class="condition-note">
         📋 新規入会で<strong>2,000円相当のポイント</strong>がもらえます。ネット申込＋マルイ店頭受取で<strong>2,000円分クーポン</strong>も選択可。
       </div>
-      <p class="affiliate-note">※ 上記リンクはアフィリエイト広告です</p>
+      <!-- ★ JANet承認後、下記を "※ 上記リンクはアフィリエイト広告です" に戻してください ★ -->
+      <p class="affiliate-note">※ 現在はエポスカード公式サイトへの直接リンクです</p>
 
     </div>
   </div>
@@ -387,8 +392,9 @@
 
 <footer>
   <div class="footer-channel">Around50s Iwassan</div>
+  <!-- ★ JANet承認後、1行目を "当ページのリンクにはアフィリエイト広告が含まれます。" に戻してください ★ -->
   <div class="footer-note">
-    当ページのリンクにはアフィリエイト広告が含まれます。<br>
+    当ページは現在エポスカード公式サイトへの直接リンクを掲載しています。<br>
     © Around50s Iwassan. All rights reserved.
   </div>
 </footer>
