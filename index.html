@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="いわっさんおすすめのエポスカード。年会費永年無料・最短即日発行・海外旅行保険付帯。">
-<meta property="og:title" content="エポスカード｜いわっさんおすすめリンク">
+<meta property="og:title" content="エポスカード / いわっさんおすすめカード">
 <meta property="og:description" content="年会費永年無料！新規入会で2,000ポイントがもらえます。">
 <meta property="og:type" content="website">
-<title>エポスカード｜いわっさんおすすめリンク</title>
+<title>エポスカード / いわっさんおすすめカード</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -271,6 +271,34 @@
     transition: border-color 0.2s;
   }
   .yt-banner:hover { border-color: rgba(255,80,80,0.4); }
+
+  .note-banner {
+    background: var(--dark);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    transition: border-color 0.2s;
+    margin-top: 12px;
+  }
+  .note-banner:hover { border-color: rgba(65,201,180,0.4); }
+  .note-icon {
+    width: 40px;
+    height: 40px;
+    background: #41C9B4;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0D0D0D;
+    font-family: 'Noto Serif JP', serif;
+  }
   .yt-icon {
     width: 40px;
     height: 40px;
@@ -312,10 +340,52 @@
     line-height: 1.7;
   }
 
+  .card-desc {
+    font-size: 12.5px;
+    color: var(--text);
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+  .card-desc strong { color: #FF8090; font-weight: 500; }
+
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 12.5px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .info-table tr:not(:last-child) td,
+  .info-table tr:not(:last-child) th {
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .info-table th {
+    background: rgba(255,255,255,0.03);
+    color: var(--text-muted);
+    font-weight: 500;
+    text-align: left;
+    letter-spacing: 0.05em;
+    padding: 10px 14px;
+    width: 34%;
+    white-space: nowrap;
+    vertical-align: top;
+  }
+  .info-table td {
+    background: var(--mid);
+    color: var(--text);
+    padding: 10px 14px;
+    line-height: 1.7;
+  }
+  .info-table td strong { color: #FF8090; font-weight: 500; }
+
   @media (max-width: 400px) {
     .card-header { padding: 18px 20px 16px; }
     .card-body { padding: 20px; }
     .points-grid { grid-template-columns: 1fr; }
+    .info-table th { width: 30%; font-size: 11px; padding: 8px 10px; }
+    .info-table td { font-size: 11.5px; padding: 8px 10px; }
   }
 </style>
 </head>
@@ -323,7 +393,7 @@
 
 <header>
   <div class="channel-name">Around50s Iwassan</div>
-  <h1 class="page-title">いわっさんおすすめリンク</h1>
+  <h1 class="page-title">エポスカード / いわっさんおすすめカード</h1>
   <p class="page-subtitle">エポスカード 公式アフィリエイトページ</p>
 </header>
 
@@ -334,8 +404,7 @@
       <div class="card-icon">💳</div>
       <div class="card-header-text">
         <h2>エポスカード</h2>
-        <!-- ★ JANet承認後、下記を "PR · AFFILIATE" に戻してください ★ -->
-        <p>公式サイトへ</p>
+        <p>PR · AFFILIATE</p>
       </div>
     </div>
     <div class="card-body">
@@ -346,6 +415,16 @@
         <span class="badge badge-instant">最短即日発行</span>
         <span class="badge badge-insurance">海外旅行保険付帯</span>
       </div>
+
+      <!-- 概要 -->
+      <table class="info-table">
+        <tr><th>年会費</th><td><strong>永年無料</strong></td></tr>
+        <tr><th>発行スピード</th><td>ネット申込＋マルイ店頭受取で<strong>最短即日</strong></td></tr>
+        <tr><th>海外旅行保険</th><td>最高<strong>3,000万円</strong>（利用付帯）</td></tr>
+        <tr><th>優待サービス</th><td>「エポトクプラザ」全国<strong>10,000店+</strong>（マルイ含む）</td></tr>
+        <tr><th>申込条件</th><td>18歳以上（高校生を除く）※学生・主婦も申込可</td></tr>
+        <tr><th>ゴールド招待</th><td>利用実績に応じ、年会費永年無料の「エポスゴールドカード」への招待あり</td></tr>
+      </table>
 
       <!-- ポイント -->
       <div class="points-grid">
@@ -361,35 +440,32 @@
         </div>
       </div>
 
-      <!-- 申込みボタン（ASP審査完了までの暫定リンク） -->
-      <!-- ★ JANet審査が承認され、バナーコードが発行されたら
-           このブロックをJANetのバナーコード（<script>〜<div>）に差し替えてください ★ -->
-          <script language='javascript' src='https://ad-verification.j-a-net.jp/ad/js/brandsafe.js'></script>
-<div id='div_admane_async_1918_658_2969'>
-<script language='javascript'>
-<!--
-brandsafe_js_async('//ad-verification.j-a-net.jp/ad', '_site=1918&_article=658&_link=2969&_image=3216', '2451468', '837424', '');
-//-->
-</script>
-</div>
+      <!-- JANetバナー -->
+      <div class="banner-label">PR · JANet アフィリエイト</div>
+      <div class="banner-area">
 
+        <script language='javascript' src='https://ad-verification.j-a-net.jp/ad/js/brandsafe.js'></script>
+        <div id='div_admane_async_1918_658_2969'>
+        <script language='javascript'>
+        <!--
+        brandsafe_js_async('//ad-verification.j-a-net.jp/ad', '_site=1918&_article=658&_link=2969&_image=3216', '2451468', '837424', '');
+        //-->
+        </script>
+        </div>
 
-      <a href="https://www.eposcard.co.jp/" target="_blank" rel="noopener" class="cta-btn">
-        ▶ エポスカードに申し込む
-      </a>
+      </div>
 
       <!-- 条件メモ -->
       <div class="condition-note">
         📋 新規入会で<strong>2,000円相当のポイント</strong>がもらえます。ネット申込＋マルイ店頭受取で<strong>2,000円分クーポン</strong>も選択可。
       </div>
-      <!-- ★ JANet承認後、下記を "※ 上記リンクはアフィリエイト広告です" に戻してください ★ -->
-      <p class="affiliate-note">※ 現在はエポスカード公式サイトへの直接リンクです</p>
+      <p class="affiliate-note">※ 上記リンクはアフィリエイト広告です</p>
 
     </div>
   </div>
 
   <!-- YouTube Banner -->
-  <a href="https://www.youtube.com/@around50siwassan" target="_blank" rel="noopener" class="yt-banner">
+  <a href="https://www.youtube.com/@iwassan50s" target="_blank" rel="noopener" class="yt-banner">
     <div class="yt-icon">▶</div>
     <div class="yt-text">
       <strong>Around50s Iwassan</strong>
@@ -398,13 +474,22 @@ brandsafe_js_async('//ad-verification.j-a-net.jp/ad', '_site=1918&_article=658&_
     <div class="yt-arrow">›</div>
   </a>
 
+  <!-- note Banner -->
+  <a href="https://note.com/joyful_allium943/n/nb6ab3d03a7f9" target="_blank" rel="noopener" class="note-banner">
+    <div class="note-icon">note</div>
+    <div class="yt-text">
+      <strong>エポスカード大改定を徹底解説</strong>
+      <small>ゴールド維持かプラチナ昇格か｜note記事はこちら</small>
+    </div>
+    <div class="yt-arrow">›</div>
+  </a>
+
 </main>
 
 <footer>
   <div class="footer-channel">Around50s Iwassan</div>
-  <!-- ★ JANet承認後、1行目を "当ページのリンクにはアフィリエイト広告が含まれます。" に戻してください ★ -->
   <div class="footer-note">
-    当ページは現在エポスカード公式サイトへの直接リンクを掲載しています。<br>
+    当ページのリンクにはアフィリエイト広告が含まれます。<br>
     © Around50s Iwassan. All rights reserved.
   </div>
 </footer>
